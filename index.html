@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="index.html">products</a></li>
+                    <li><a href="index.html">about</a></li>
+                    <li><a href="index.html">location</a></li>
+                    <li><a href="index.html">cart</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="searchbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.414" height="21.414" viewBox="0 0 21.414 21.414"><g transform="translate(-3.5 -3.5)"><path d="M20.5,12.5a8,8,0,1,1-8-8A8,8,0,0,1,20.5,12.5Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M31.5,31.5l-6.525-6.525" transform="translate(-8 -8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
+            </a>
+        </header>
+        <div class="leftbar">
+            <h2>Aer</h2>
+        </div>
+        <div class="imgbox">
+            <img id="img" src="images/jesus.png" alt="jesus">
+        </div>
+        <div class="textbox">
+            <h1>ქრისტე დღესაც სასწაულებს სჩადის</h1>
+            <p>დააჭირე ღილაკს და იხილე სასწაული, ოღონდ სანამ ღილაკს დააჭერ, სამჯერ წაიკითხე Ave Maria</p>
+            <button id="button" type="button">იხილე სასწაული</button>
+        </div>
+    </main>
+    <!-- script -->
+    <script>
+        const btn = document.getElementById('button')
+        const img = document.getElementById('img')
+
+        btn.addEventListener('click', () => {
+            if (img.classList.contains('started') && img.classList.contains('paused')) {
+                img.classList.remove('paused')
+            } else if (img.classList.contains('started') && !img.classList.contains('paused')) {
+                img.classList.add('paused')
+            } else {
+                img.classList.add('started')
+            }
+        })
+
+
+        console.log('hi');
+    </script>
+</body>
+</html>
